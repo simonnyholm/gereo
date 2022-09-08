@@ -27,6 +27,10 @@ const GereoBoardDummy = () => {
           <div></div>
           <audio hidden src=""></audio>
         </section>
+        <section>
+          <div></div>
+          <audio hidden src=""></audio>
+        </section>
       </div>
       <section>
         <button onClick={setPlayState(true)}>Play</button>{" "}
