@@ -16,19 +16,19 @@ const GereoBoard = () => {
   const [playState, setPlayState] = useState(false);
 
   const playerA = useRef();
-  const [volPlayerA, setVolPlayerA] = useState(0.5);
+  const [volPlayerA, setVolPlayerA] = useState(0.2);
 
   const playerB = useRef();
-  const [volPlayerB, setVolPlayerB] = useState(0.5);
+  const [volPlayerB, setVolPlayerB] = useState(0.9);
 
   const playerC = useRef();
-  const [volPlayerC, setVolPlayerC] = useState(0.5);
+  const [volPlayerC, setVolPlayerC] = useState(0.2);
 
   const playerD = useRef();
-  const [volPlayerD, setVolPlayerD] = useState(0.5);
+  const [volPlayerD, setVolPlayerD] = useState(0.2);
 
   const playerX = useRef();
-  const [volPlayerX, setVolPlayerX] = useState(0.5);
+  const [volPlayerX, setVolPlayerX] = useState(0.2);
 
   const pressPlay = () => {
     playerA.current.audio.current.play();
@@ -53,6 +53,18 @@ const GereoBoard = () => {
         <h2>GereoSpeakers</h2>
         <div>
           <div>A</div>
+          <input
+            onChange={(event) => {
+              setVolPlayerA(event.target.value);
+            }}
+            type="range"
+            name="RangeplayerA"
+            id="volume"
+            max={1.0}
+            min={0.0}
+            step={0.1}
+            value={1.0}
+          />
           <div>
             {" "}
             <AudioPlayer
@@ -161,7 +173,7 @@ const GereoBoard = () => {
             // other props here
           />
         </div>
-        <div></div>
+        <div>X</div>
         <div>
           {" "}
           <AudioPlayer
