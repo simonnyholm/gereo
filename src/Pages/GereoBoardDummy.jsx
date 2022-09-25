@@ -48,6 +48,7 @@ const GereoBoardDummy = () => {
 
   return (
     <div>
+      <h1>Walk!</h1>
       <div>
         <section>
           <div>A</div>
@@ -220,8 +221,7 @@ const GereoBoardDummy = () => {
             </button>
           )}
         </div>
-        <button onClick={setPlayState(true)}>Play</button>{" "}
-        <button onClick={setPlayState(false)}>Pause</button>
+
       </section>
     </div>
   );
